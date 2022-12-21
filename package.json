@@ -1,0 +1,25 @@
+{
+  "name": "@nap-software-bs/expect",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nap-software-bs/expect.git"
+  },
+  "author": "NAP-Software <info@nap.software>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nap-software-bs/expect/issues"
+  },
+  "homepage": "https://github.com/nap-software-bs/expect#readme",
+  "dependencies": {
+    "@nap-software-bs/unwrap-primitive-object": "0.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
