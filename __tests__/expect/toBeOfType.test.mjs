@@ -10,6 +10,10 @@ test("should given the expected type", () => {
 	toBeOfType("boolean", true)
 	toBeOfType("boolean", new Boolean(true))
 	toBeOfType("object", {})
+	toBeOfType("array", [])
+	toBeOfType("array", [1, 2, 3])
+	toBeOfType("array", [{a: 1}, {a: 2}])
+	toBeOfType("array", new Array(1,2,3))
 })
 
 test("should throw when value is not of expected type", () => {
