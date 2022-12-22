@@ -28,9 +28,9 @@ describe("context.expect()", () => {
 		const context = createExpectationsContext()
 		expect(context.expect()).toHaveProperty("toHaveSubString")
 	})
-	test("should have .toBeOfType function", () => {
+	test("should have .toBeOfPrimitiveType function", () => {
 		const context = createExpectationsContext()
-		expect(context.expect()).toHaveProperty("toBeOfType")
+		expect(context.expect()).toHaveProperty("toBeOfPrimitiveType")
 	})
 	test("should have .toBeInstanceOf function", () => {
 		const context = createExpectationsContext()
@@ -59,9 +59,9 @@ describe("context.expect().not", () => {
 		const context = createExpectationsContext()
 		expect(context.expect().not).toHaveProperty("toHaveSubString")
 	})
-	test("should have .toBeOfType function", () => {
+	test("should have .toBeOfPrimitiveType function", () => {
 		const context = createExpectationsContext()
-		expect(context.expect().not).toHaveProperty("toBeOfType")
+		expect(context.expect().not).toHaveProperty("toBeOfPrimitiveType")
 	})
 	test("should have .toBeInstanceOf function", () => {
 		const context = createExpectationsContext()

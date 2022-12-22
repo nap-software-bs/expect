@@ -52,7 +52,7 @@ export default function invert(label, fn, ...args) {
 				)
 			} break
 
-			case "toBeOfType": {
+			case "toBeOfPrimitiveType": {
 				const [expected, actual] = args
 
 				return context.throw_ExpectationNotMetError(

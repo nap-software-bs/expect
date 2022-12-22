@@ -9,7 +9,7 @@ const determineTypeOfVariable = function(variable) {
 	return typeof unwrap(variable)
 }
 
-export default function toBeOfType(expected, value) {
+export default function toBeOfPrimitiveType(expected, value) {
 	const context = this.context
 
 	const actual = determineTypeOfVariable(value)

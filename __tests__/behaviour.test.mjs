@@ -34,14 +34,14 @@ describe("behaviour", () => {
 		context.expect(() => {
 			throw new Error("Hello, World!")
 		}).toThrowError("World!")
-		context.expect("").toBeOfType("string")
+		context.expect("").toBeOfPrimitiveType("string")
 		context.expect(new String).toBeInstanceOf(String)
 
 		context.expect(1).not.toBe(2)
 		context.expect({}).not.toEqual({a: 1})
 		context.expect({}).not.toHaveProperty("a")
 		context.expect("Hello, World!").not.toHaveSubString("abc")
-		context.expect(1).not.toBeOfType("string")
+		context.expect(1).not.toBeOfPrimitiveType("string")
 		context.expect(new String).not.toBeInstanceOf(Array)
 
 		expect(context.madeAssertions).toBe(13)

@@ -3,14 +3,14 @@ import toEqual_fn from "./src/expect/toEqual.mjs"
 import toHaveProperty_fn from "./src/expect/toHaveProperty.mjs"
 import toHaveSubString_fn from "./src/expect/toHaveSubString.mjs"
 import toThrowError_fn from "./src/expect/toThrowError.mjs"
-import toBeOfType_fn from "./src/expect/toBeOfType.mjs"
+import toBeOfPrimitiveType_fn from "./src/expect/toBeOfPrimitiveType.mjs"
 import toBeInstanceOf_fn from "./src/expect/toBeInstanceOf.mjs"
 
 import notToBe_fn from "./src/expect/not_toBe.mjs"
 import notToEqual_fn from "./src/expect/not_toEqual.mjs"
 import notToHaveProperty_fn from "./src/expect/not_toHaveProperty.mjs"
 import notToHaveSubString_fn from "./src/expect/not_toHaveSubString.mjs"
-import notToBeOfType_fn from "./src/expect/not_toBeOfType.mjs"
+import notToBeOfPrimitiveType_fn from "./src/expect/not_toBeOfPrimitiveType.mjs"
 import notToBeInstanceOf_fn from "./src/expect/not_toBeInstanceOf.mjs"
 
 const export_object = {
@@ -59,8 +59,8 @@ const export_object = {
 					toThrowError_fn.call({context}, value, expectedErrorMessage)
 					context.madeAssertions++
 				},
-				toBeOfType(type) {
-					toBeOfType_fn.call({context}, type, value)
+				toBeOfPrimitiveType(type) {
+					toBeOfPrimitiveType_fn.call({context}, type, value)
 					context.madeAssertions++
 				},
 				toBeInstanceOf(object) {
@@ -84,8 +84,8 @@ const export_object = {
 						notToHaveSubString_fn.call({context}, value, substring)
 						context.madeAssertions++
 					},
-					toBeOfType(type) {
-						notToBeOfType_fn.call({context}, type, value)
+					toBeOfPrimitiveType(type) {
+						notToBeOfPrimitiveType_fn.call({context}, type, value)
 						context.madeAssertions++
 					},
 					toBeInstanceOf(object) {
